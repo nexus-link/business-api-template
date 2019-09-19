@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>netcoreapp2.2</TargetFramework>
-		<DocumentationFile>C:\Git\AcmeCorp\BusinessApi\src\AcmeCorp.BusinessApi.Service\AcmeCorp.BusinessApi.Service.xml</DocumentationFile>
+		<DocumentationFile>AcmeCorp.BusinessApi.Service.xml</DocumentationFile>
 		<ApplicationIcon />
 		<OutputType>Exe</OutputType>
 		<StartupObject />
