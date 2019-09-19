@@ -8,10 +8,6 @@ using Nexus.Link.Libraries.Web.Logging.Stackify;
 using Nexus.Link.Libraries.Web.Pipe.Outbound;
 using Nexus.Link.Services.Implementations.BusinessApi.Startup;
 using Nexus.Link.Services.Implementations.BusinessApi.Startup.Configuration;
-using AcmeCorp.BusinessApi.Libraries.Contracts.Capabilities.CustomerServiceManagement;
-using AcmeCorp.BusinessApi.Libraries.Contracts.Capabilities.ServiceProvisioning;
-using AcmeCorp.BusinessApi.Service.RestClients.Capabilities.CustomerServiceManagement;
-using AcmeCorp.BusinessApi.Service.RestClients.Capabilities.ServiceProvisioning;
 
 namespace AcmeCorp.BusinessApi.Service
 {
@@ -41,16 +37,6 @@ namespace AcmeCorp.BusinessApi.Service
             // Adapter services 
             //
             var httpClient = HttpClientFactory.Create(OutboundPipeFactory.CreateDelegatingHandlers());
-           
-            // ServiceProvisioningCaseManagement
-            services.AddScoped<IServiceProvisioningCapability>(provider =>
-                ValidateDependencyInjection(provider, p =>
-                    new ServiceProvisioningCapability($"{_serviceProvisioningCaseManagementUrl}", httpClient, GetLocalCredentials())));
-           
-            // ServiceConfigurationManagement
-            services.AddScoped<ICustomerServiceManagementCapability>(provider =>
-                ValidateDependencyInjection(provider, p =>
-                    new CustomerServiceManagementCapability($"{_serviceProvisioningCaseManagementUrl}", httpClient, GetLocalCredentials())));
         }
 
         /// <inheritdoc />
