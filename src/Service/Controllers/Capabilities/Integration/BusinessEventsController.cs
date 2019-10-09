@@ -4,14 +4,14 @@ using Nexus.Link.Services.Controllers.Capabilities.Integration.BusinessEvents;
 
 namespace AcmeCorp.BusinessApi.Service.Controllers.Capabilities.Integration
 {
-    /// <inheritdoc cref="BusinessEventsControllerBase" />
-    [Route("api/Integration/v1/BusinessEvents/[controller]")]
-    [ApiController]
-    public class BusinessEventsController : BusinessEventsControllerBase
+  /// <inheritdoc cref="BusinessEventsControllerBase" />
+  [Route("api/Integration/v1/BusinessEvents/[controller]")]
+  [ApiController]
+  public class BusinessEventsController : BusinessEventsControllerBase
+  {
+    /// <inheritdoc />
+    public BusinessEventsController(IBusinessEventsCapability capability) : base(capability)
     {
-        /// <inheritdoc />
-        public BusinessEventsController(IBusinessEventsCapability capability) : base(capability)
-        {
-        }
     }
+  }
 }

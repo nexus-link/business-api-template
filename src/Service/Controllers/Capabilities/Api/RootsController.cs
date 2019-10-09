@@ -2,8 +2,8 @@
 
 namespace AcmeCorp.BusinessApi.Service.Controllers.Capabilities.Api
 {
-    /// <inheritdoc cref="RootsControllerBase" />
-    public class RootsController : RootsControllerBase
-    {
-    }
+  /// <inheritdoc cref="RootsControllerBase" />
+  public class RootsController : RootsControllerBase
+  {
+  }
 }

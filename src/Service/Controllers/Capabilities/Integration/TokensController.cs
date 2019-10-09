@@ -4,14 +4,14 @@ using Nexus.Link.Services.Controllers.Capabilities.Integration.Authentication;
 
 namespace AcmeCorp.BusinessApi.Service.Controllers.Capabilities.Integration
 {
-    /// <inheritdoc cref="TokensControllerBase" />
-    [Route("api/Integration/v1/Authentication/[controller]")]
-    [ApiController]
-    public class TokensController : TokensControllerBase
+  /// <inheritdoc cref="TokensControllerBase" />
+  [Route("api/Integration/v1/Authentication/[controller]")]
+  [ApiController]
+  public class TokensController : TokensControllerBase
+  {
+    /// <inheritdoc />
+    public TokensController(IAuthenticationCapability capability) : base(capability)
     {
-        /// <inheritdoc />
-        public TokensController(IAuthenticationCapability capability) : base(capability)
-        {
-        }
     }
+  }
 }

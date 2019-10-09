@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AcmeCorp.BusinessApi.Libraries.Contracts.Capabilities
 {
-    class Class1
-    {
-    }
+  class Class1
+  {
+  }
 }

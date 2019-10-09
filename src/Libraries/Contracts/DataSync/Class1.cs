@@ -1,6 +1,6 @@
 ﻿namespace AcmeCorp.BusinessApi.Libraries.Contracts.DataSync
 {
-    class Class1
-    {
-    }
+  class Class1
+  {
+  }
 }
