@@ -13,11 +13,11 @@ trigger:
       - dev
   paths:
     include:
-      - 'src/AcmeCorp.BusinessApi.Libraries.Sdk/*'
+      - 'src/Libraries/Controllers/*'
 
 jobs:
   - template: 'templates/netcore/v1/jobs/nuget.yml@azure-devops-tools'
     parameters:
-      nugetProjectsPath: 'src/AcmeCorp.BusinessApi.Libraries.Sdk/*.csproj'
-      testProjectsPath: 'test/Sdk.Test/*.csproj'
+      nugetProjectsPath: 'src/Libraries/Controllers/*.csproj'
+      testProjectsPath: '' #'test/Controllers.Test/*.csproj'
       publishVstsFeed: 'AcmeCorpNexus'

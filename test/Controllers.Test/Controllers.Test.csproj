@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\AcmeCorp.BusinessApi.Libraries.Controllers\AcmeCorp.BusinessApi.Libraries.Controllers.csproj" />
+    <ProjectReference Include="..\..\src\Libraries\Controllers\Controllers.csproj" />
   </ItemGroup>
 
 </Project>

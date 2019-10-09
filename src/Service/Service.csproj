@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
 		<TargetFramework>netcoreapp2.2</TargetFramework>
@@ -21,9 +21,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\AcmeCorp.BusinessApi.Libraries.Contracts\AcmeCorp.BusinessApi.Libraries.Contracts.csproj" />
-		<ProjectReference Include="..\AcmeCorp.BusinessApi.Libraries.Controllers\AcmeCorp.BusinessApi.Libraries.Controllers.csproj" />
-		<ProjectReference Include="..\AcmeCorp.BusinessApi.Libraries.Sdk\AcmeCorp.BusinessApi.Libraries.Sdk.csproj" />
+		<ProjectReference Include="..\Libraries\Contracts\Contracts.csproj" />
+		<ProjectReference Include="..\Libraries\Controllers\Controllers.csproj" />
+		<ProjectReference Include="..\Libraries\Sdk\Sdk.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

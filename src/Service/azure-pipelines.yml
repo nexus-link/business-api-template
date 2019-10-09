@@ -12,13 +12,13 @@ trigger:
       - master
   paths:
     include:
-      - 'src/AcmeCorp.BusinessApi.Service/*'
+      - 'src/Service/*'
 
 jobs:
   - template: 'templates/netcore/v1/jobs/webapp.yml@azure-devops-tools'
     parameters:
       testProjectsPath: ''
-      appProjectsPath: '**/src/AcmeCorp.BusinessApi.Service/**/*.csproj'
+      appProjectsPath: '**/src/Service/**/*.csproj'
       buildConfiguration: 'Debug'
       azureSubscription: 'azure-acmecorp-nexus'
       webAppName: 'tst-business-api-acmecorp-nexus'
