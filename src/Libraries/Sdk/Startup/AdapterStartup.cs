@@ -8,9 +8,12 @@ using Nexus.Link.Libraries.Core.Logging;
 using Nexus.Link.Libraries.Core.Threads;
 using Nexus.Link.Libraries.Web.AspNet.Authorize;
 using Nexus.Link.Libraries.Web.Logging.Stackify;
-using Nexus.Link.Services.Contracts.Capabilities.Integration;
+using Nexus.Link.Services.Contracts.Events;
 using Nexus.Link.Services.Implementations.Adapter.Startup;
 using Nexus.Link.Services.Implementations.BusinessApi.Startup.Configuration;
+using AcmeCorp.BusinessApi.Libraries.Contracts.Capabilities.NexusApi;
+using AcmeCorp.BusinessApi.Libraries.Controllers;
+using AcmeCorp.BusinessApi.Libraries.Sdk.Capabilities.NexusApi;
 
 namespace AcmeCorp.BusinessApi.Libraries.Sdk.Startup
 {
@@ -26,8 +29,7 @@ namespace AcmeCorp.BusinessApi.Libraries.Sdk.Startup
     protected AdapterStartup(IConfiguration configuration) : base(configuration)
     {
       BusinessApi.Initialize(AdapterConfiguration.BusinessApiEndpoint, AdapterConfiguration.BusinessApiCredentials);
-      Nexus.Link.Services.Implementations.Adapter.Events.Extensions.BusinessEventService =
-          BusinessApi.Integration.BusinessEvents.BusinessEventService;
+      EventExtensions.BusinessEventService = BusinessApi.Integration.BusinessEvents.BusinessEventService;
     }
 
     /// <inheritdoc />
@@ -40,8 +42,11 @@ namespace AcmeCorp.BusinessApi.Libraries.Sdk.Startup
     protected override void DependencyInjectBusinessApiServices(IServiceCollection services)
     {
       // Inject the Business API SDK
-      services.AddSingleton<IIntegrationCapability>(provider =>
-          ValidateDependencyInjection(provider, p => BusinessApi.Integration));
+      services.AddSingleton(p => BusinessApi.Integration);
+
+      services.AddScoped<INexusApiCapability, NexusApiCapability>();
+
+      this.RegisterCapabilityControllers();
     }
 
     /// <inheritdoc />

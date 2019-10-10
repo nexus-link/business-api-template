@@ -5,12 +5,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nexus.Link.Services.Implementations" Version="1.9.5" />
+    <PackageReference Include="Nexus.Link.Services.Implementations" Version="2.0.2" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Controllers\Controllers.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
@@ -19,7 +28,7 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>acmecorp</PackageTags>
     <Authors>XLENT Link</Authors>
-    <PackageProjectUrl>https://github.com/acmecorp-nexus/BusinessApi</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/acmecorp-nexus/business-api</PackageProjectUrl>
     <PackageLanguage>en-US</PackageLanguage>
     <Description>SDK with convenience classes for adapters.</Description>
     <Copyright>Copyright ©2019 Xlent Link AB</Copyright>

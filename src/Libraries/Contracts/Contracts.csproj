@@ -12,11 +12,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nexus.Link.Services.Contracts" Version="1.2.4" />
+    <PackageReference Include="Nexus.Link.Services.Contracts" Version="2.0.0" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
 
   <PropertyGroup>
@@ -25,7 +30,7 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>acmecorp</PackageTags>
     <Authors>XLENT Link</Authors>
-    <PackageProjectUrl>https://github.com/acmecorp-nexus/BusinessApi</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/acmecorp-nexus/business-api</PackageProjectUrl>
     <PackageLanguage>en-US</PackageLanguage>
     <Description>Contracts to be fulfilled by Nexus adapters</Description>
     <Copyright>Copyright ©2019 Xlent Link AB</Copyright>

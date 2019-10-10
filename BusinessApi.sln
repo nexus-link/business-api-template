@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29123.88
@@ -21,6 +21,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcmeCorp.BusinessApi.Libraries.Controllers", "src\Libraries\Controllers\Controllers.csproj", "{A3B66CBA-29E4-4F90-93F4-7EAC4F8AD9EE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcmeCorp.BusinessApi.Libraries.Sdk", "src\Libraries\Sdk\Sdk.csproj", "{8AAA17FB-80F7-454A-950F-3CA1CDF32964}"
+	ProjectSection(ProjectDependencies) = postProject
+		{78F0F230-B929-4A81-A3F8-5A904528F555} = {78F0F230-B929-4A81-A3F8-5A904528F555}
+		{2C519A3C-7435-406E-AE03-A925480BC7CD} = {2C519A3C-7435-406E-AE03-A925480BC7CD}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controllers.Test", "test\Controllers.Test\Controllers.Test.csproj", "{2C519A3C-7435-406E-AE03-A925480BC7CD}"
 EndProject
@@ -68,6 +72,14 @@ Global
 		{78F0F230-B929-4A81-A3F8-5A904528F555}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78F0F230-B929-4A81-A3F8-5A904528F555}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78F0F230-B929-4A81-A3F8-5A904528F555}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D30E8F2B-6275-481F-8433-B26B0A64DFC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D30E8F2B-6275-481F-8433-B26B0A64DFC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D30E8F2B-6275-481F-8433-B26B0A64DFC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D30E8F2B-6275-481F-8433-B26B0A64DFC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44CE5794-4046-4D54-8759-7CFA660A144D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44CE5794-4046-4D54-8759-7CFA660A144D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44CE5794-4046-4D54-8759-7CFA660A144D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44CE5794-4046-4D54-8759-7CFA660A144D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

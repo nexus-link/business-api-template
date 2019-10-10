@@ -9,15 +9,28 @@
     <UserSecretsId>977736a0-201c-4b55-b504-75bdc046d7f2</UserSecretsId>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="wwwroot\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Nexus.Link.Libraries.Web.AspNet" Version="2.8.1" />
-    <PackageReference Include="Nexus.Link.Services.Controllers" Version="1.4.1" />
-    <PackageReference Include="Nexus.Link.Services.Implementations" Version="1.9.5" />
+    <PackageReference Include="Nexus.Link.Libraries.Web.AspNet" Version="2.12.0" />
   </ItemGroup>
 
   <ItemGroup>

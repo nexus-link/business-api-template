@@ -1,11 +1,12 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nexus.Link.Services.Controllers" Version="1.4.1" />
+    <PackageReference Include="Nexus.Link.Services.Controllers" Version="2.1.2" />
+    <PackageReference Include="Nexus.Link.Services.Implementations" Version="2.0.2" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -16,13 +17,17 @@
     <ProjectReference Include="..\Contracts\Contracts.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+
   <PropertyGroup>
     <PackageId>AcmeCorp.BusinessApi.Libraries.Controllers</PackageId>
     <Version>1.11.1</Version>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>acmecorp</PackageTags>
     <Authors>XLENT Link</Authors>
-    <PackageProjectUrl>https://github.com/acmecorp-nexus/BusinessApi</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/acmecorp-nexus/business-api</PackageProjectUrl>
     <PackageLanguage>en-US</PackageLanguage>
     <Description>Base Controllers to be inherited by Nexus Adapter controllers.</Description>
     <Copyright>Copyright ©2019 Xlent Link AB</Copyright>
