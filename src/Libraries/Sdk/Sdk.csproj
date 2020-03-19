@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nexus.Link.Services.Implementations" Version="2.0.2" />
+    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Controllers\Controllers.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PackageId>AcmeCorp.BusinessApi.Libraries.Sdk</PackageId>
+    <Version>1.9.5</Version>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageTags>acmecorp</PackageTags>
+    <Authors>XLENT Link</Authors>
+    <PackageProjectUrl>https://github.com/acmecorp-nexus/business-api</PackageProjectUrl>
+    <PackageLanguage>en-US</PackageLanguage>
+    <Description>SDK with convenience classes for adapters.</Description>
+    <Copyright>Copyright ©2019 Xlent Link AB</Copyright>
+    <IncludeSymbols>true</IncludeSymbols>
+    <PackageReleaseNotes>
+      1.9.5 Bump
+      1.9.2 Moved code to Nexus SDK:s.
+      1.9.0 Added DataSyncMemoryMock.
+      1.8.0 Added BusinessApi and events extension.
+      1.7.1 IIntegrationCapability now singleton
+      1.7.0 Event Receiver
+      1.6.3 Bump
+      1.6.1 Added MandatoryRoleRequirement
+      1.5.0 Mocks all integrations services for adapters in Development mode.
+      1.4.17 Bump
+      1.4.3 Moved Stackify call to the adapters.
+      1.3.4 Bump
+      1.3.3 Refactored Startup.
+      1.2.25 Bump
+      1.2.16 Added IntegrationCapability.
+      1.1.4 Bump
+      1.1.0 Added AdapterStartupHelperBase to support quick configuration of Startup.cs in the adapters.
+      1.0.1 Bump
+      1.0.0 First Release
+    </PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+</Project>

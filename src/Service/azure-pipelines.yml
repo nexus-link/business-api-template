@@ -1,0 +1,25 @@
+resources:
+  repositories:
+    - repository: azure-devops-tools
+      type: github
+      endpoint: 'github-nla-acmecorp-nexus'
+      name: 'nexus-link/nexus-azure-devops-tools'
+      ref: 'refs/heads/master'
+
+trigger:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - 'src/Service/*'
+
+jobs:
+  - template: 'templates/netcore/v1/jobs/webapp.yml@azure-devops-tools'
+    parameters:
+      testProjectsPath: ''
+      appProjectsPath: '**/src/Service/**/*.csproj'
+      buildConfiguration: 'Debug'
+      azureSubscription: 'azure-acmecorp-nexus'
+      webAppName: 'tst-business-api-acmecorp-nexus'
+      appSettings: ''
